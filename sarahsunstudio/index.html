@@ -1,0 +1,272 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sarah Sun Studio – Sonnenstudio Aachen Innenstadt | Studenten- & Wochenendrabatt</title>
+  <meta name="description" content="Dein Sonnenstudio in Aachen-Innenstadt: moderne Ergoline-Sonnenbänke, 10 % Studentenrabatt & 20 % Wochenendrabatt. Jetzt Termin via WhatsApp sichern!">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.sarahsunstudio.de/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sarah Sun Studio – Sonnenstudio Aachen Innenstadt">
+  <meta property="og:description" content="Moderne Sonnenbank-Geräte, attraktive Rabatte und persönliche Beratung. Buche deinen Termin online!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sarahsunstudio.de/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1537818432805-df688c9861ea?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TanningSalon",
+    "name": "Sarah Sun Studio",
+    "image": "https://images.unsplash.com/photo-1537818432805-df688c9861ea?auto=format&fit=crop&w=1200&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Neupforte 13",
+      "addressLocality": "Aachen",
+      "postalCode": "52062",
+      "addressCountry": "DE"
+    },
+    "geo": {"@type":"GeoCoordinates","latitude":"50.7740291","longitude":"6.0839863"},
+    "url": "https://www.sarahsunstudio.de/",
+    "telephone": "+4924190054154",
+    "priceRange": "€€",
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"18:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"12:00","closes":"17:00"}
+    ],
+    "sameAs":[
+      "https://www.instagram.com/sarahsunstudio",
+      "https://maps.google.com/?cid=0x5a8e9a5e1ef4c765"
+    ]
+  }
+  </script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========= Design-Tokens ========= */
+    :root{
+      --primary:#C8A2C8;           /* Lila */
+      --primary-light:#F2E9F7;     /* Helllavendel */
+      --dark:#333333;
+      --white:#ffffff;
+      --radius:0.65rem;
+      --shadow-sm:0 1px 4px rgba(0,0,0,.06);
+      --shadow-lg:0 8px 20px rgba(0,0,0,.1);
+      scroll-behavior:smooth;
+    }
+
+    /* ========= Global ========= */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Poppins',sans-serif;
+      color:var(--dark);line-height:1.6;background:var(--white);
+    }
+    img{max-width:100%;height:auto;display:block;border-radius:var(--radius)}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(90%,1100px);margin-inline:auto;padding-block:clamp(1.5rem,4vw,3rem)}
+    .btn{
+      display:inline-flex;align-items:center;gap:.5rem;
+      padding:.75rem 1.25rem;border-radius:var(--radius);
+      background:var(--primary);color:var(--white);font-weight:600;
+      box-shadow:var(--shadow-sm);transition:transform .2s;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .shadow-sm{box-shadow:var(--shadow-sm)}
+    .shadow-lg{box-shadow:var(--shadow-lg)}
+    h1,h2,h3{font-weight:600;line-height:1.3}
+    section{scroll-margin-top:4.5rem}
+
+    /* ========= Navigation ========= */
+    header{
+      background:var(--white);position:sticky;top:0;z-index:50;
+      box-shadow:0 0 10px rgba(0,0,0,.04);
+    }
+    nav{display:flex;align-items:center;justify-content:space-between;height:4rem;width:min(95%,1100px);margin-inline:auto}
+    .nav-links{display:flex;gap:1rem;font-size:.95rem}
+    .nav-links a{padding:.5rem .75rem;border-radius:.4rem}
+    .nav-links a:hover{background:var(--primary-light)}
+    @media(max-width:600px){.nav-links{display:none}}
+
+    /* ========= Hero ========= */
+    .hero{
+      background:url('/resources/images/zonbank.png') center/cover no-repeat;
+      min-height:100vh;display:grid;place-items:center;color:var(--white);
+      text-align:center;position:relative;
+    }
+    .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35)}
+    .hero-content{position:relative;max-width:620px;padding:1rem}
+    .hero h1{font-size:clamp(2rem,6vw,3.25rem);margin-bottom:1rem}
+    .hero ul{list-style:none;margin-bottom:2rem}
+    .hero li{margin:.25rem 0}
+    .hero .btn{background:var(--primary-light);color:var(--dark)}
+
+    /* ========= Reviews ========= */
+    .reviews-grid{display:grid;gap:1.5rem}
+    @media(min-width:700px){.reviews-grid{grid-template-columns:repeat(3,1fr)}}
+    .review-card{
+      background:var(--white);padding:1.25rem;border-radius:var(--radius);
+      border:1px solid #eee;box-shadow:var(--shadow-sm)
+    }
+    .review-name{font-weight:600;margin-top:.5rem}
+    .stars{color:#f6c31c;letter-spacing:-2px;font-size:1.1rem}
+
+    /* ========= Preise ========= */
+    .prices-grid{display:grid;gap:1.5rem;margin-top:1rem}
+    @media(min-width:700px){.prices-grid{grid-template-columns:repeat(3,1fr)}}
+    .price-card{
+      background:var(--primary-light);padding:1.5rem;border-radius:var(--radius);
+      text-align:center;box-shadow:var(--shadow-lg)
+    }
+    .price-card h3{margin-bottom:.5rem}
+    .discount-badge{
+      background:var(--primary);color:var(--white);padding:.3rem .6rem;
+      border-radius:999px;font-size:.8rem;display:inline-block;margin-top:.5rem
+    }
+
+    /* ========= Markenchips ========= */
+    .brands{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+    .brand-chip{
+      padding:.5rem 1rem;border:2px solid var(--primary);
+      border-radius:999px;font-weight:600;font-size:.9rem;background:var(--white)
+    }
+
+    /* ========= Kontakt ========= */
+    .contact-grid{display:grid;gap:2rem}
+    @media(min-width:900px){.contact-grid{grid-template-columns:1fr 1fr}}
+    .contact-card{
+      background:var(--primary);color:var(--white);padding:2rem;border-radius:var(--radius);box-shadow:var(--shadow-lg)
+    }
+    .contact-card h3{margin-bottom:.75rem}
+    .contact-card a.btn{background:var(--white);color:var(--primary)}
+    footer{font-size:.8rem;text-align:center;padding:1.5rem 0;background:var(--primary-light);margin-top:3rem}
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#home" aria-label="Zur Startseite"><strong>Sarah Sun Studio</strong></a>
+    <div class="nav-links">
+      <a href="#reviews">Bewertungen</a>
+      <a href="#preise">Preise</a>
+      <a href="#marken">Marken</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <a href="https://wa.me/4924190054154?text=Hallo%20Sarah%2C%20ich%20möchte%20einen%20Sonnentermin%20buchen" class="btn" aria-label="WhatsApp Termin">
+      📱 Termin
+    </a>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Sonnenstudio Aachen Innenstadt – Strahlend braun mit&nbsp;Sarah</h1>
+      <ul>
+        <li>Moderne, hygienische Sonnenbänke</li>
+        <li>10 % Studentenrabatt • 20 % Wochenendrabatt</li>
+        <li>Persönliche Beratung durch Sarah</li>
+      </ul>
+      <a href="https://wa.me/4924190054154?text=Hallo%20Sarah%2C%20ich%20möchte%20einen%20Sonnentermin%20buchen" class="btn">WhatsApp&nbsp;➔</a>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="container">
+    <h2>Google-Bewertungen Sonnenstudio Aachen</h2>
+    <div class="reviews-grid">
+      <article class="review-card" aria-label="Google Rezension Lexie Böhme">
+        <span class="stars">★★★★★</span>
+        <p>“Sara is the best! Very knowledgeable and professional. She gladly spoke English and explained everything.”</p>
+        <p class="review-name">— Lexie Böhme <small>(Google)</small></p>
+      </article>
+      <article class="review-card" aria-label="Google Rezension Paula Kutsch">
+        <span class="stars">★★★★★</span>
+        <p>„Individuelle Beratung der passenden Sonnenbank und Bräunungszeit. Preise unschlagbar!“</p>
+        <p class="review-name">— Paula Kutsch <small>(Google)</small></p>
+      </article>
+      <article class="review-card" aria-label="Google Rezension Lena Cessur">
+        <span class="stars">★★★★★</span>
+        <p>„Erstes Mal bei Sarah gewesen und sehr zufrieden. Humorvoll und sympathisch – ich komme wieder!“</p>
+        <p class="review-name">— Lena Cessur <small>(Google)</small></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Preise -->
+  <section id="preise" class="container">
+    <h2>Preise Solarium Aachen</h2>
+    <div class="prices-grid">
+      <div class="price-card">
+        <h3>10 Minuten</h3>
+        <p><strong>8,00&nbsp;€</strong></p>
+        <span class="discount-badge">-10 % Studenten</span>
+      </div>
+      <div class="price-card">
+        <h3>20 Minuten</h3>
+        <p><strong>15,00&nbsp;€</strong></p>
+        <span class="discount-badge">-10 % Studenten</span>
+      </div>
+      <div class="price-card">
+        <h3>30 Minuten</h3>
+        <p><strong>22,00&nbsp;€</strong></p>
+        <span class="discount-badge">-10 % Studenten</span>
+      </div>
+    </div>
+    <p style="margin-top:1rem"><em>Jeden Samstag &amp; Sonntag – <span style="color:var(--primary)">20 % Wochenendrabatt!</span></em></p>
+  </section>
+
+  <!-- Marken -->
+  <section id="marken" class="container" style="text-align:center">
+    <h2>Unsere Sonnenbank-Marken</h2>
+    <p>Wir setzen auf erstklassige Geräte:</p>
+    <div class="brands" aria-label="Sonnenbank-Marken">
+      <span class="brand-chip">Ergoline</span>
+      <span class="brand-chip">megaSun</span>
+      <span class="brand-chip">Luxura</span>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="container">
+    <h2>Termin vereinbaren</h2>
+    <div class="contact-grid">
+      <div class="shadow-sm" style="border-radius:var(--radius);overflow:hidden">
+        <iframe title="Karte Sarah Sun Studio" width="100%" height="350" style="border:0"
+          loading="lazy" allowfullscreen
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.673477640299!2d6.0839863!3d50.7740291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0996eaff53dbd%3A0x5a8e9a5e1ef4c765!2sNeupforte%2013%2C%2052062%20Aachen%2C%20Germany!5e0!3m2!1sen!2sde!4v1623427607304!5m2!1sen!2sde"></iframe>
+        <p style="padding:1rem .75rem">
+          Neupforte 13, 52062 Aachen<br>
+          <strong>Öffnungszeiten</strong><br>
+          Mo–Fr 10:00–20:00<br>
+          Sa 10:00–18:00 (-20 %)<br>
+          So 12:00–17:00 (-20 %)
+        </p>
+      </div>
+      <div class="contact-card">
+        <h3>Direkt Kontakt aufnehmen</h3>
+        <p>Telefon / WhatsApp: <a href="tel:+4924190054154" style="color:var(--white)">+49 241 90054154</a></p>
+        <p>E-Mail: <a href="mailto:info@sarahsunstudio.de" style="color:var(--white)">info@sarahsunstudio.de</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sarahsunstudio" style="color:var(--white)">@sarahsunstudio</a></p>
+        <a href="https://wa.me/4924190054154?text=Hallo%20Sarah%2C%20ich%20möchte%20einen%20Sonnentermin%20buchen" class="btn" style="margin-top:1rem">WhatsApp Termin&nbsp;➔</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Sarah Sun Studio • <a href="#home">Nach oben</a> • 
+  <a href="datenschutz.html">Datenschutz</a> • 
+  <a href="impressum.html">Impressum</a>
+</footer>
+
+</body>
+</html>
